@@ -79,7 +79,7 @@ class Authentication {
 
             const x_id_key = await redisAuthStore(user, 60 * 60 * 23)
             res.setHeader('x-id-key', x_id_key)
-            return res.status(201).json({msg: 'User created successfully, proceed to continuing setting up your profile'})
+            return res.status(201).json({msg: 'User created successfully, proceed to continuing setting up your profile..'})
         } catch (err:any) {
             console.error('Error during physician signup : ', err);
             return res.status(500).json({ err: 'Internal server error.', error: err });
